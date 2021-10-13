@@ -1,32 +1,29 @@
 const container = document.getElementById('container');
 const add = document.getElementById('add');
 const library = ['Moby Dick', 'Peter Pan', 'Harry Potter', 'The Hobbit'];
-const array = document.getElementsByName('library[]');
-
-let book = ( (title, author, pages, hasRead) => {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.hasRead = hasRead
-    this.info = function() {
-        console.log(`the ${title} by ${author}, ${pages}, ${hasRead}`)
-    }
-})
-
-const addBookToLibrary = ( () => {
-    
-})
 
 add.addEventListener('click', () => {
-    
-})
+    const title = document.getElementById('title').value
+    const author = document.getElementById('author').value
+    const pages = document.getElementById('pages').value
+    const hasRead = document.getElementById('hasRead').value
+    if (title === '' || author  === '' || pages === '' || hasRead === '') {
+        alert("Please fill out the entire form!")
+        return console.error("error");
+    }
 
-let displayBooks = ( () => {
-    for (i = 0; i < library.length; i++) {
-        container.appendChild(library[i])
-        //console.log(library[i])
+    else {  
+        console.log("First name:" + " " + hasRead + "\n" + "Last name:" + " " + author + "\n" + 
+        "Email:" + " " + pages + "\n" + "Password:")
     }
 })
 
-displayBooks()
+/*let displayBooks = ( () => {
+    for (i = 0; i < library.length; i++) {
+        //container.appendChild(library[i])
+        console.log(library[i])
+    }
+})
+
+displayBooks()*/
 
