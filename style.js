@@ -17,15 +17,38 @@ add.addEventListener('click', () => {
     const author = document.getElementById('author').value
     const pages = document.getElementById('pages').value
     const hasRead = document.getElementById('hasRead').value
-        library.push(`${title} by: ${author}, ${pages} pages, Read: ${hasRead}`)
-})
+
+            const newDiv = document.createElement('div');
+            const userTitle = document.createElement('p')
+            userTitle.setAttribute('id', 'userTitle')
+            const userAuthor = document.createElement('p')
+            userAuthor.setAttribute('id', 'userAuthor')
+            const userPages = document.createElement('p')
+            userPages.setAttribute('id', 'userPages')
+            const userRead = document.createElement('p')
+            userRead.setAttribute('id', 'userRead')
+            newDiv.appendChild(userTitle)
+            newDiv.appendChild(userAuthor)
+            newDiv.appendChild(userPages)
+            newDiv.appendChild(userRead)
+            container.appendChild(newDiv);
+
+            library.push(`${title} by: ${author}, ${pages} pages, Read: ${hasRead}`)
+
+            const postBook = ( () => {
+                document.getElementById('userTitle').innerHTML = title
+                document.getElementById('userAuthor').innerHTML = author
+                document.getElementById('userPages').innerHTML = pages
+                document.getElementById('userRead').innerHTML = hasRead
+            })  
+
+            postBook()
+
+}) 
 
 let displayBooks = ( () => {
     for (i = 0; i < library.length; i++) {
-        const newDiv = document.createElement('div');
-        container.prepend(newDiv);
-        
-        //console.log(library[i])
+        console.log(library[i])
     }
 })
 
