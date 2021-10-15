@@ -1,0 +1,27 @@
+body {
+    background: turquoise;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#mainDiv {
+    width: 200px;
+    height: 300px;
+    margin: 40px;
+    border-radius: 3px;
+    text-align: center;
+    background: url(paper-background.jpeg);
+    background-repeat: none;
+    background-position: center;
+
+    
+}
+
+#mainPara {
+    font-size: 20px;
+    position: relative;
+    top: 30%;
+}

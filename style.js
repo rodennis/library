@@ -32,19 +32,24 @@ function addBookToLibrary() {
                 const pages = document.getElementById('pages').value = '';
                 const hasRead = document.getElementById('hasRead').value = '';
             }
-})
+
+           library.forEach(function(userBook, index){
+              
+            newDiv = document.createElement('div');
+            newDiv.setAttribute('id', 'mainDiv');
+            const mainDiv = document.getElementById('#mainDiv');
+            const newP = document.createElement('p');
+            newP.setAttribute('id', 'mainPara');
+            const mainPara = document.getElementById('mainPara');
+                container.appendChild(newDiv)
+                newDiv.appendChild(newP);
+                newP.textContent = userBook;
+               console.log(userBook, index)
+               
+            
+           })
+           
+    })
 }
 
 addBookToLibrary()
-
-let displayBooks = ( () => {
-    for (i = 0; i < library.length; i++) {
-        const newDiv = document.createElement('div');
-        container.appendChild(newDiv);
-        const PostBook = document.createElement('p')
-        newDiv.appendChild(PostBook);
-        console.log(library[i])
-    }
-})
-
-displayBooks()
