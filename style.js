@@ -1,6 +1,7 @@
 const container = document.getElementById('container');
 const add = document.getElementById('add');
-const library = ['noby dick', 'sean connery', 'your mom'];
+const addBook = document.getElementById('addBook')
+const library = [];
 
 function book(title, author, pages, hasRead) {
     this.title = title
@@ -11,6 +12,10 @@ function book(title, author, pages, hasRead) {
         console.log(`the ${title} by ${author}, ${pages}, ${hasRead}`)
     }
 }
+
+addBook.addEventListener('click', () => {
+    document.getElementById('book-submission').className="show"
+})
 
 
 function addBookToLibrary() {
@@ -33,7 +38,9 @@ function addBookToLibrary() {
                 const hasRead = document.getElementById('hasRead').value = '';
             }
 
-           library.forEach(function(userBook, index){
+            document.querySelectorAll("#mainDiv").forEach(e => e.remove());
+
+            for (i = 0; i < library.length; i++)  {
               
             newDiv = document.createElement('div');
             newDiv.setAttribute('id', 'mainDiv');
@@ -41,14 +48,11 @@ function addBookToLibrary() {
             const newP = document.createElement('p');
             newP.setAttribute('id', 'mainPara');
             const mainPara = document.getElementById('mainPara');
-                container.appendChild(newDiv)
+                container.appendChild(newDiv);
                 newDiv.appendChild(newP);
-                newP.textContent = userBook;
-               console.log(userBook, index)
-               
-            
-           })
-           
+                newP.textContent = library[i];    
+    }
+    document.getElementById('book-submission').className="hide";
     })
 }
 

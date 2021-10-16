@@ -1,5 +1,45 @@
 body {
-    background: turquoise;
+    background: rgb(119,136,153);
+
+}
+
+.header {
+    
+}
+
+#book-submission {
+   position: absolute;
+   top: 100px;
+   border: 5px solid rgb(119,136,153);
+   background-color: orange;
+   border-radius: 10px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   right: 40px;
+}
+
+#addBook {
+   
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px;
+    right: 92px;
+    position: absolute;
+    margin-top: 30px;
+   
+    
+}
+
+input:focus {
+    outline: none;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    border-style: none;
+    
 }
 
 #container {
@@ -11,9 +51,9 @@ body {
     width: 200px;
     height: 300px;
     margin: 40px;
-    border-radius: 3px;
+    border-radius: 10px;
     text-align: center;
-    background: url(paper-background.jpeg);
+    background-color: orange;
     background-repeat: none;
     background-position: center;
 
@@ -24,4 +64,31 @@ body {
     font-size: 20px;
     position: relative;
     top: 30%;
+    ;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+
+.logo {
+    width: 100px;
+    margin-left: 0px;
+}
+
+#add {
+    border-style: none;
+    border-radius: 10px;
+    background-color: rgb(119,136,153);
+    color: white;
+    width: 60px;
+    height: 20px;
+    left: 53px;
+    position: relative;
+    top: 5px;
 }
